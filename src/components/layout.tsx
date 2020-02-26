@@ -274,7 +274,7 @@ const Layout = ({ children, color }: LayoutProps) => {
           </SideBarInner>
           <Main>{children}</Main>
           <Footer color={color}>
-            <Box p={[6, 6, 8]} fontSize={1}>
+            <Box p={[6, 6, 8]} fontSize={3}>
               <a href="https://instagram.com/milesshebar" rel="noopener noreferrer" target="_blank">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
