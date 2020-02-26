@@ -25,7 +25,7 @@ const GridItem = styled(Link)`
     padding: ${props => props.theme.space[6]};
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 
-    @media (max-width: ${props => props.theme.breakpoints[3]}) {
+    @media (max-width: ${props => props.theme.breakpoints[2]}) {
       font-size: ${props => props.theme.fontSizes[2]};
       padding: ${props => props.theme.space[5]};
       bottom: 0.1rem;
