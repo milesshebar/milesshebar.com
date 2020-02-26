@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import { transparentize, readableColor } from 'polished'
 import styled from 'styled-components'
 import { config, useSpring, animated } from 'react-spring'
+import ReactPlayer from 'react-player'
 import Layout from '../components/layout'
 import { Box, AnimatedBox, Button } from '../elements'
 import SEO from '../components/SEO'
@@ -32,11 +33,28 @@ const Category = styled(AnimatedBox)`
 `
 
 const Description = styled(animated.div)`
-  max-width: 960px;
+  max-width: 1400px;
   letter-spacing: -0.003em;
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
   line-height: 1.58;
+`
+
+const Photographer = styled(animated.p)`
+  text-align: center;
+  font-size: 0.75rem;
+`
+
+const Metadata = styled(animated.div)`
+  max-width: 960px;
+  letter-spacing: -0.003em;
+  --baseline-multiplier: 0.179;
+  --x-height-multiplier: 0.35;
+  line-height: 0.5;
+`
+
+const Video = styled(ReactPlayer)`
+  margin-top: 50px;
 `
 
 const PButton = styled(Button)<{ color: string }>`
@@ -52,6 +70,12 @@ type PageProps = {
       category: string
       desc: string
       slug: string
+      role: string
+      director: string
+      photographer: string
+      company: string
+      year: string
+      video_link: string
       parent: {
         modifiedTime: string
         birthTime: string
@@ -99,7 +123,7 @@ const Project: React.FunctionComponent<PageProps> = ({ data: { project, images }
     <Layout color={project.color}>
       <SEO
         pathname={project.slug}
-        title={`${project.title_detail} | Jodie`}
+        title={`${project.title_detail} | Miles Shebar`}
         desc={project.desc}
         node={project.parent}
         banner={project.cover.childImageSharp.resize.src}
@@ -108,23 +132,50 @@ const Project: React.FunctionComponent<PageProps> = ({ data: { project, images }
       <PBox py={10} px={[6, 6, 8, 10]}>
         <Category style={categoryAnimation}>{project.category}</Category>
         <animated.h1 style={titleAnimation}>{project.title_detail}</animated.h1>
+        <Metadata>
+          {!!project.role && (
+            <animated.p style={titleAnimation}>
+              Role <strong>{project.role}</strong>
+            </animated.p>
+          )}
+          {!!project.director && (
+            <animated.p style={titleAnimation}>
+              Director <strong>{project.director}</strong>
+            </animated.p>
+          )}
+          {!!project.company && (
+            <animated.p style={titleAnimation}>
+              Company <strong>{project.company}</strong>
+            </animated.p>
+          )}
+          {!!project.year && (
+            <animated.p style={titleAnimation}>
+              Year <strong>{project.year}</strong>
+            </animated.p>
+          )}
+        </Metadata>
         <Description style={descAnimation}>
           <div dangerouslySetInnerHTML={{ __html: project.desc }} />
         </Description>
+        {!!project.video_link && <Video url={project.video_link} controls="true" width="100%" />}
       </PBox>
       <Content bg={project.color} py={10}>
         <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
           {images.nodes.map(image => (
             <Img alt={image.name} key={image.childImageSharp.fluid.src} fluid={image.childImageSharp.fluid} />
           ))}
+          {!!project.photographer && (
+            <Photographer style={imagesAnimation}>
+              <em>Photos by {project.photographer}</em>
+            </Photographer>
+          )}
         </PBox>
       </Content>
-      <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <h2>Want to start your own project?</h2>
+      {/*<PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
         <PButton color={project.color} py={4} px={8}>
           Contact Us
-        </PButton>
-      </PBox>
+          </PButton>
+      </PBox>*/}
     </Layout>
   )
 }
@@ -133,11 +184,17 @@ export default Project
 
 export const query = graphql`
   query ProjectTemplate($slug: String!, $images: String!) {
-    project: projectsYaml(slug: { eq: $slug }) {
+    project: portfolioYaml(slug: { eq: $slug }) {
       title_detail
       color
       category
       desc
+      role
+      director
+      photographer
+      company
+      year
+      video_link
       slug
       parent {
         ... on File {

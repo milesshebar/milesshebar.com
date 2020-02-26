@@ -15,7 +15,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await wrapper(
     graphql(`
       {
-        projects: allProjectsYaml {
+        projects: allPortfolioYaml {
           nodes {
             slug
             images

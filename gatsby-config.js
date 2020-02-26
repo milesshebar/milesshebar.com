@@ -30,8 +30,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'projects',
-        path: `${__dirname}/content/projects`,
+        name: 'portfolio',
+        path: `${__dirname}/content/portfolio`,
       },
     },
     {
@@ -74,7 +74,6 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'standalone',
-        icon: 'src/favicon.png',
       },
     },
     'gatsby-plugin-offline',

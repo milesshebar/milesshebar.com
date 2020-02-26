@@ -3,10 +3,16 @@ import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { readableColor } from 'polished'
 import 'typeface-work-sans'
+import 'typeface-inconsolata'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { faInstagram, faTwitter, faImdb } from '@fortawesome/free-brands-svg-icons'
 import { Box, Flex } from '../elements'
 import theme from '../../config/theme'
 import reset from '../styles/reset'
-import Logo from './logo'
+
+config.autoAddCss = false
 
 const GlobalStyles = createGlobalStyle`
   *::before,
@@ -44,6 +50,8 @@ const GlobalStyles = createGlobalStyle`
     h6 {
       font-size: ${theme.fontSizes[0]};
     }
+
+
     
     @media (max-width: 600px) {
       font-size: 16px;
@@ -120,6 +128,13 @@ const SideBarInner = styled(Box)<{ bg: string }>`
   flex-wrap: nowrap;
   justify-content: space-between;
 
+  a {
+    font-family: 'Space Mono', monospace;
+    text-decoration: none;
+    line-height: 1;
+    color: ${props => readableColor(`${props.bg}`)};
+  }
+
   background: ${props => props.bg};
 
   @media (max-width: ${props => props.theme.breakpoints[4]}) {
@@ -142,6 +157,7 @@ const Nav = styled(Flex)<{ color: string }>`
     color: ${props => readableColor(`${props.color}`)};
     font-size: ${props => props.theme.fontSizes[3]};
     line-height: 1.5;
+    font-family: 'Inconsolata', monospace;
     &:hover,
     &:focus,
     &.navlink-active {
@@ -183,6 +199,7 @@ const Footer = styled.footer<{ color: string }>`
   a {
     color: ${props => readableColor(`${props.color}`)};
     text-decoration: none;
+    padding-right: 30px;
     &:hover {
       color: ${props => props.theme.colors.primary};
     }
@@ -195,6 +212,11 @@ const Footer = styled.footer<{ color: string }>`
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     position: relative;
     width: 100%;
+    text-align: center;
+    a {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
   }
 `
 
@@ -228,9 +250,9 @@ const Layout = ({ children, color }: LayoutProps) => {
               alignItems={['center', 'center', 'center', 'flex-start']}
               justifyContent="space-between"
             >
-              <Box width={['3rem', '4rem', '5rem', '6rem']}>
-                <Link to="/" aria-label="LekoArts, Back to Home">
-                  <Logo />
+              <Box width={['3rem', '2rem', '5rem', '10rem']}>
+                <Link to="/" aria-label="Home">
+                  <h1>miles shebar</h1>
                 </Link>
               </Box>
               <Nav
@@ -246,14 +268,22 @@ const Layout = ({ children, color }: LayoutProps) => {
                     {item.name}
                   </PartialNavLink>
                 ))}
+                <a href="https://www.dropbox.com/s/seggh5w937lc0ix/MilesShebarActingResume.pdf?dl=1">Resume</a>
               </Nav>
             </Flex>
           </SideBarInner>
           <Main>{children}</Main>
           <Footer color={color}>
-            <Box p={[6, 6, 8]} fontSize={0}>
-              Starter by <a href="https://www.lekoarts.de/en">LekoArts</a>.<br />
-              <a href="https://github.com/LekoArts/gatsby-starter-portfolio-jodie">Source</a>.
+            <Box p={[6, 6, 8]} fontSize={1}>
+              <a href="https://instagram.com/milesshebar" rel="noopener noreferrer" target="_blank">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a href="https://www.imdb.com/name/nm6814411/" rel="noopener noreferrer" target="_blank">
+                <FontAwesomeIcon icon={faImdb} />
+              </a>
+              <a href="https://twitter.com/milesshebar" rel="noopener noreferrer" target="_blank">
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
             </Box>
           </Footer>
         </Wrapper>

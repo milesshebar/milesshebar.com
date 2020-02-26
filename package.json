@@ -27,8 +27,13 @@
     "test:ci": "npm-run-all -s test:compile server:ci"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.19.11",
+    "gatsby-cli": "^2.9.0",
     "gatsby-image": "^2.2.40",
     "gatsby-plugin-google-analytics": "^2.1.35",
     "gatsby-plugin-manifest": "^2.2.41",
@@ -47,9 +52,12 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-pdf": "^4.1.0",
+    "react-player": "^1.15.2",
     "react-spring": "^8.0.27",
     "styled-components": "^4.4.1",
     "styled-system": "^5.1.4",
+    "typeface-inconsolata": "^0.0.72",
     "typeface-work-sans": "^0.0.72",
     "typescript": "^3.7.5"
   },
