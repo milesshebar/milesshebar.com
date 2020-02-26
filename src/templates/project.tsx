@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { transparentize, readableColor } from 'polished'
+import { transparentize } from 'polished'
 import styled from 'styled-components'
 import { config, useSpring, animated } from 'react-spring'
 import ReactPlayer from 'react-player'
 import Layout from '../components/layout'
-import { Box, AnimatedBox, Button } from '../elements'
+import { Box, AnimatedBox } from '../elements'
 import SEO from '../components/SEO'
 
 const PBox = styled(AnimatedBox)`
@@ -55,11 +55,6 @@ const Metadata = styled(animated.div)`
 
 const Video = styled(ReactPlayer)`
   margin-top: 50px;
-`
-
-const PButton = styled(Button)<{ color: string }>`
-  background: ${props => (props.color === 'white' ? 'black' : props.color)};
-  color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
 `
 
 type PageProps = {

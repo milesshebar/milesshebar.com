@@ -65,7 +65,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       '@type': 'Person',
       name: author,
     },
-    copyrightYear: '2019',
+    copyrightYear: '2020',
     creator: {
       '@type': 'Person',
       name: author,
@@ -74,7 +74,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       '@type': 'Person',
       name: author,
     },
-    datePublished: '2019-03-10T10:30:00+01:00',
+    datePublished: '2020-02-26T10:30:00-05:00',
     dateModified: buildTime,
     image: {
       '@type': 'ImageObject',
@@ -133,7 +133,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         '@type': 'Person',
         name: author,
       },
-      copyrightYear: '2019',
+      copyrightYear: '2020',
       creator: {
         '@type': 'Person',
         name: author,

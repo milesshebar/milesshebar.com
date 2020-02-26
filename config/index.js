@@ -13,7 +13,7 @@ module.exports = {
   
     // siteFBAppID: '123456789', // Facebook App ID - Optional
     userTwitter: '@milesshebar', // Twitter Username
-    ogSiteName: 'milesshebar', // Facebook Site Name
+    ogSiteName: 'Miles Shebar — Actor', // Facebook Site Name
     ogLanguage: 'en_US', // og:language
     googleAnalyticsID: 'UA-22892278-5',
   

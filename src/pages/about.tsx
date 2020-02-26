@@ -42,22 +42,27 @@ const About: React.FunctionComponent<PageProps> = ({ data: { aboutMe } }) => {
         <h1>About</h1>
         <Headshot fluid={aboutMe.childImageSharp.fluid} />
         <Bio>
-          <strong>Miles Shebar</strong> is an actor from New York, NY and soon-to-be graduate of Kenyon College. At
-          Kenyon he performed regularly, appearing in mainstage productions of <em>When We Were Young and Unafraid</em>,{' '}
-          <em>Rosencrantz & Guildenstern Are Dead</em>, and <em>The Comedy of Errors</em>, as well as many student films
-          and productions like <em>Legally Blonde</em> and{' '}
-          <a href="https://vimeo.com/315581918" target="_blank" rel="noopener noreferrer">
-            <em>Much Ado About (Literally Nothing)</em>
-          </a>
-          . In 2017 he appeared in a staged reading of Diana Nneka Atuona's new play <em>The Boy from the Bay</em> at the Kenyon Playwrights Conference.
+          <strong>Miles Shebar</strong> graduates this year from Kenyon College, where he was featured in numerous plays
+          and films. His mainstage credits include Tom Stoppard’s <em>Rosencrantz & Guildenstern Are Dead</em>{' '}
+          (Guildenstern), <em>The Comedy of Errors</em> (Dromio), and <em>When We Were Young and Unafraid</em> (Paul).
+          In 2017 he appeared in a staged reading of Diana Nneka Atuona's new play <em>The Boy from the Bay</em> at the
+          Kenyon Playwrights Conference.
         </Bio>
-
+        <Bio>
+          In 2018 Miles participated in the British American Dramatic Academy's Midsummer in Oxford intensive program.
+        </Bio>
+        <Bio>
+          Miles’s voice acting was recently featured in two episodes of the <em>New York Times</em>'s Webby
+          Award-winning animated series <em>Trump Bites</em>, which Sean Hannity called “despicable”.
+        </Bio>
+        <Bio>Miles is so excited to be coming home to New York to pursue his lifelong passion.</Bio>
         <Bio>
           Manager:{' '}
           <a href="https://bercytalent.com" target="_blank" rel="noopener noreferrer">
             Jason Bercy
           </a>
         </Bio>
+        <Bio>Contact: miles dot shebar at gee mail dot com</Bio>
       </AnimatedBox>
     </Layout>
   )

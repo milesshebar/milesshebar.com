@@ -23,11 +23,13 @@ const GridItem = styled(Link)`
     font-weight: 700;
     font-size: ${props => props.theme.fontSizes[4]};
     padding: ${props => props.theme.space[6]};
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 
     @media (max-width: ${props => props.theme.breakpoints[3]}) {
-      font-size: ${props => props.theme.fontSizes[3]};
+      font-size: ${props => props.theme.fontSizes[2]};
       padding: ${props => props.theme.space[5]};
+      bottom: 0.1rem;
+      text-align: right;
     }
   }
   &:hover {
