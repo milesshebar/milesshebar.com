@@ -268,7 +268,9 @@ const Layout = ({ children, color }: LayoutProps) => {
                     {item.name}
                   </PartialNavLink>
                 ))}
-                <a href="/MilesShebarActingResume.pdf">Resume</a>
+                <a href="/MilesShebarActingResume.pdf" target="_blank">
+                  Resume
+                </a>
               </Nav>
             </Flex>
           </SideBarInner>
