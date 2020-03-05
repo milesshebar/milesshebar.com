@@ -33,7 +33,7 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.19.11",
-    "gatsby-cli": "^2.9.0",
+    "gatsby-cli": "^2.10.0",
     "gatsby-image": "^2.2.40",
     "gatsby-plugin-google-analytics": "^2.1.35",
     "gatsby-plugin-manifest": "^2.2.41",
