@@ -64,6 +64,7 @@ results
 yarn-error.log
 .idea
 .vscode
+content/portfolio/old
 
 cypress/e2e/build
 
