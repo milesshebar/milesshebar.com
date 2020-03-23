@@ -52,6 +52,10 @@ const Metadata = styled(animated.div)`
   --x-height-multiplier: 0.35;
   line-height: 0.5;
 `
+const Byline = styled(animated.div)`
+  margin-top: -1.25rem;
+  margin-bottom: 30px;
+`
 
 const Video = styled(ReactPlayer)`
   margin-top: 50px;
@@ -66,6 +70,7 @@ type PageProps = {
       desc: string
       slug: string
       role: string
+      playwright: string
       director: string
       photographer: string
       company: string
@@ -127,6 +132,7 @@ const Project: React.FunctionComponent<PageProps> = ({ data: { project, images }
       <PBox py={10} px={[6, 6, 8, 10]}>
         <Category style={categoryAnimation}>{project.category}</Category>
         <animated.h1 style={titleAnimation}>{project.title_detail}</animated.h1>
+        {!!project.playwright && <Byline style={titleAnimation}>by {project.playwright}</Byline>}
         <Metadata>
           {!!project.role && (
             <animated.p style={titleAnimation}>
@@ -149,9 +155,11 @@ const Project: React.FunctionComponent<PageProps> = ({ data: { project, images }
             </animated.p>
           )}
         </Metadata>
-        <Description style={descAnimation}>
-          <div dangerouslySetInnerHTML={{ __html: project.desc }} />
-        </Description>
+        {!!project.desc && (
+          <Description style={descAnimation}>
+            <div dangerouslySetInnerHTML={{ __html: project.desc }} />
+          </Description>
+        )}
         {!!project.video_link && <Video url={project.video_link} controls="true" width="100%" />}
       </PBox>
       <Content bg={project.color} py={10}>
@@ -187,6 +195,7 @@ export const query = graphql`
       role
       director
       photographer
+      playwright
       company
       year
       video_link
