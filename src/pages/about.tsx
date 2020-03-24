@@ -42,8 +42,8 @@ const About: React.FunctionComponent<PageProps> = ({ data: { aboutMe } }) => {
         <h1>About</h1>
         <Headshot fluid={aboutMe.childImageSharp.fluid} />
         <Bio>
-          <strong>Miles Shebar</strong> graduates this year from Kenyon College, where he was featured in numerous plays
-          and films. His mainstage credits include Tom Stoppard’s <em>Rosencrantz & Guildenstern Are Dead</em>{' '}
+          <strong>Miles Shebar</strong> graduates this year from Kenyon College, where he was featured in numerous plays and
+          films. His mainstage credits include Tom Stoppard’s <em>Rosencrantz & Guildenstern Are Dead</em>{' '}
           (Guildenstern), <em>The Comedy of Errors</em> (Dromio), and <em>When We Were Young and Unafraid</em> (Paul).
           Other credits include <em>Late: A Cowboy Song</em> (Crick), <em>Legally Blonde</em> (Warner),{' '}
           <em>The Importance of Being Earnest</em> (Lane/Merriman), and <em>Trudy & Max In Love</em> (Max). He appeared
@@ -51,21 +51,23 @@ const About: React.FunctionComponent<PageProps> = ({ data: { aboutMe } }) => {
           Conference.
         </Bio>
         <Bio>
-          In 2018 Miles participated in the British American Dramatic Academy's Midsummer in Oxford intensive program,
-          where he performed scenes from Brecht, Shakespeare and others.
+          Miles is also an alumnus of the British American Dramatic Academy's Midsummer in Oxford intensive program,
+          where he performed scenes from <em>The Resistible Rise of Arturo Ui</em> and <em>Richard III</em>.
         </Bio>
         <Bio>
           His voice acting was recently featured in two episodes of the <em>New York Times</em>'s Webby Award-winning
           animated series <em>Trump Bites</em>, which Sean Hannity called “despicable”.
         </Bio>
-        <Bio>Miles is so excited to be coming home to New York to pursue his lifelong passion.</Bio>
+        <Bio>
+          Miles is excited to be home in New York, albeit earlier than planned, ready to pursue his lifelong passion.
+        </Bio>
         {/*<Bio>
           Manager:{' '}
           <a href="https://bercytalent.com" target="_blank" rel="noopener noreferrer">
             Jason Bercy
           </a>
         </Bio>*/}
-        <Bio>Contact: miles dot shebar at gee mail dot com</Bio>
+        <Bio>Contact: miles [dot] shebar [at] gee mail [dot] com</Bio>
       </AnimatedBox>
     </Layout>
   )
