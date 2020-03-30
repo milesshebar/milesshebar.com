@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 type Props = { title: string; desc: string; image: string } & typeof defaultProps
 
 const defaultProps = {
-  username: '',
+  username: 'milesshebar',
 }
 
 const Twitter = ({ username, title, desc, image }: Props) => (

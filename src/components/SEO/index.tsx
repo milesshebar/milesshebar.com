@@ -7,8 +7,8 @@ import Twitter from './twitter'
 type Props = {} & typeof defaultProps
 
 const defaultProps = {
-  title: '',
-  desc: '',
+  title: 'Miles Shebar - Actor',
+  desc: 'Miles Shebar is an actor based in New York, NY.',
   banner: '',
   pathname: '',
   node: {
