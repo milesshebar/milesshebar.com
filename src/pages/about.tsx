@@ -42,10 +42,10 @@ const About: React.FunctionComponent<PageProps> = ({ data: { aboutMe } }) => {
         <h1>About</h1>
         <Headshot fluid={aboutMe.childImageSharp.fluid} />
         <Bio>
-          <strong>Miles Shebar</strong> graduates this year from Kenyon College, where he was featured in numerous plays and
-          films. His mainstage credits include Tom Stoppard’s <em>Rosencrantz & Guildenstern Are Dead</em>{' '}
+          <strong>Miles Shebar</strong> graduates this year from Kenyon College, where he was featured in numerous plays
+          and films. His mainstage credits include Tom Stoppard’s <em>Rosencrantz & Guildenstern Are Dead</em>{' '}
           (Guildenstern), <em>The Comedy of Errors</em> (Dromio), and <em>When We Were Young and Unafraid</em> (Paul).
-          Other credits include <em>Late: A Cowboy Song</em> (Crick), <em>Legally Blonde</em> (Warner),{' '}
+          Other credits include <em>Legally Blonde</em> (Warner), <em>Late: A Cowboy Song</em> (Crick),{' '}
           <em>The Importance of Being Earnest</em> (Lane/Merriman), and <em>Trudy & Max In Love</em> (Max). He appeared
           in a staged reading of Diana Nneka Atuona's new play <em>The Boy from the Bay</em> at the Kenyon Playwrights
           Conference.
@@ -67,7 +67,7 @@ const About: React.FunctionComponent<PageProps> = ({ data: { aboutMe } }) => {
             Jason Bercy
           </a>
         </Bio>*/}
-        <Bio>Contact: miles [dot] shebar [at] gee mail [dot] com</Bio>
+        <Bio>Contact: miles [dot] shebar [at] g mail [dot] com</Bio>
       </AnimatedBox>
     </Layout>
   )
