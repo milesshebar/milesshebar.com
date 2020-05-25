@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { faInstagram, faTwitter, faImdb } from '@fortawesome/free-brands-svg-icons'
+import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import { Box, Flex } from '../elements'
 import theme from '../../config/theme'
 import reset from '../styles/reset'
@@ -283,8 +284,8 @@ const Layout = ({ children, color }: LayoutProps) => {
               <a href="https://www.imdb.com/name/nm6814411/" rel="noopener noreferrer" target="_blank">
                 <FontAwesomeIcon icon={faImdb} />
               </a>
-              <a href="https://twitter.com/milesshebar" rel="noopener noreferrer" target="_blank">
-                <FontAwesomeIcon icon={faTwitter} />
+              <a href="https://shebar.nyc" rel="noopener noreferrer" target="_blank">
+                <FontAwesomeIcon icon={faGlobeAmericas} />
               </a>
             </Box>
           </Footer>
