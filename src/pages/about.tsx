@@ -61,12 +61,12 @@ const About: React.FunctionComponent<PageProps> = ({ data: { aboutMe } }) => {
         <Bio>
           Miles is excited to be home in New York, albeit earlier than planned, ready to pursue his lifelong passion.
         </Bio>
-        {/*<Bio>
+        <Bio>
           Manager:{' '}
           <a href="https://bercytalent.com" target="_blank" rel="noopener noreferrer">
             Jason Bercy
           </a>
-        </Bio>*/}
+        </Bio>
         <Bio>Contact: miles [dot] shebar [at] g mail [dot] com</Bio>
       </AnimatedBox>
     </Layout>

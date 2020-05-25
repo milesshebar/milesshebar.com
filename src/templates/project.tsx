@@ -38,6 +38,7 @@ const Description = styled(animated.div)`
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
   line-height: 1.58;
+  margin-top: 30px;
 `
 
 const Photographer = styled(animated.p)`
